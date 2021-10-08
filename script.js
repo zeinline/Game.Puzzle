@@ -52,14 +52,17 @@ function start() {
     }
   }
 
-  setTimeout(draw_block, 10);
-
-  starting.style.display = 'none';
-  cvs.style.display = 'block';
-  buttons.style.display = 'block';
+  ground.onload = function() {
+    setTimeout(draw_block, 10)
+    starting.style.display = 'none';
+    cvs.style.display = 'block';
+    buttons.style.display = 'block';
+  }
 }
 
 function back() {
+  lvl = [];
+
   comp.style.display = 'none';
   buttons.style.display = 'none';
   cvs.style.display = 'none';
